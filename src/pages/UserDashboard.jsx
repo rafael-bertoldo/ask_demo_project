@@ -16,6 +16,7 @@ import { useAsks } from "../providers/AsksProvider";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useHistory } from "react-router-dom";
 
 const createAskSchema = yup.object().shape({
   ask_body: yup.string().required(),
@@ -28,6 +29,7 @@ export default function UserDashboard() {
   const [theme, setTheme] = useState("");
   const [subTheme, setsubTheme] = useState("");
   const [askBody, setAskBody] = useState("");
+  const history = useHistory();
 
   const user = JSON.parse(localStorage.getItem("@ask_demo:user")) || "";
 
@@ -54,6 +56,10 @@ export default function UserDashboard() {
     setTheme("");
     setsubTheme("");
     setAskBody("");
+  };
+
+  const handleNavigate = (path) => {
+    history.push(path);
   };
 
   return (
@@ -130,6 +136,9 @@ export default function UserDashboard() {
         )}
         <AsksContainer />
       </div>
+      <span onClick={() => handleNavigate("/redFlagAsks")}>redflag</span>
+      <span onClick={() => handleNavigate("/answeredAsks")}>answered</span>
+      <span onClick={() => handleNavigate("/demoAdm")}>instructor</span>
     </Container>
   );
 }

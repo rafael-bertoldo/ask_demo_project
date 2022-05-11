@@ -16,10 +16,6 @@ export default function InstructorDashboard() {
     setAsks(loadAsks(user));
   }, []);
 
-  const handleNavigate = (path) => {
-    history.push(path);
-  };
-
   return (
     <Container>
       <Profile />

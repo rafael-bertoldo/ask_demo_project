@@ -21,6 +21,7 @@ export default function RedFlagAsks() {
   const handlePerfil = () => {
     setShowPerfil(!showPerfil);
   };
+
   return (
     <Container>
       <Profile />
