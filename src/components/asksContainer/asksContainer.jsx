@@ -8,7 +8,7 @@ import {
   AskFormButton,
   CreateAskContainer,
   SelectContainer,
-} from "../../pages/userDashboard.style";
+} from "../../pages/UserDashboard.style";
 import { useForm } from "react-hook-form";
 
 export default function AsksContainer() {
