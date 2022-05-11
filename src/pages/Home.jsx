@@ -8,7 +8,7 @@ import {
   InputContainer,
   LoginContainer,
   Message,
-} from "./home.styles";
+} from "./Home.styles";
 import logo from "../assets/logoKenzie.png";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
