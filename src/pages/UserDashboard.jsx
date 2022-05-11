@@ -7,7 +7,7 @@ import {
   AskFormButton,
   CreateAskContainer,
   SelectContainer,
-} from "./userDashboard.style";
+} from "./UserDashboard.style";
 import { FiCheckCircle, FiXCircle } from "react-icons/fi";
 import AsksContainer from "../components/asksContainer/asksContainer";
 import Profile from "../components/profile/profile";
